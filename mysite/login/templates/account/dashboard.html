@@ -3,11 +3,13 @@
         <li>
             <a href="{% url 'login:dashboard' %}">My dashboard</a>
         </li>
-        <li>
+        <li>dashboard item1</li>
+        <li>dashboard item2</li>
+        <li>dashboard itemn</li>
+    </ul>
+
         <form method="post" action="{% url 'login:logout' %}">
             {% csrf_token %}
             <button type="submit">Logout</button>
         </form>
-        </li>
-    </ul>
 {% endif %}
