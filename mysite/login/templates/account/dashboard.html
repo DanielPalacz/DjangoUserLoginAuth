@@ -1,12 +1,13 @@
 {% if request.user.is_authenticated %}
+    <a href="{% url 'login:dashboard' %}">My dashboard</a>
     <ul class="menu">
-        <li>
-            <a href="{% url 'login:dashboard' %}">My dashboard</a>
-        </li>
         <li>dashboard item1</li>
         <li>dashboard item2</li>
-        <li>dashboard itemn</li>
+        <li>dashboard item3</li>
     </ul>
+
+        <br>
+        <p>Logged as '{{request.user}}' user.</p>
 
         <form method="post" action="{% url 'login:logout' %}">
             {% csrf_token %}
