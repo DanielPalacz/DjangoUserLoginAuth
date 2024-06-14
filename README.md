@@ -13,6 +13,7 @@ python manage.py startapp login
 Developed 'login app':
 	GET /login
 	POST /logout
+	GET /logged_out
 	GET /account
 		- dashboard page
 

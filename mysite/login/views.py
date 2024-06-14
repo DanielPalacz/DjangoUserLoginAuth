@@ -7,5 +7,9 @@ def dashboard(request):
     return render(request, "account/dashboard.html", {})
 
 
+def logged_out(request):
+    return render(request, "registration/user_logged_out.html", {})
+
+
 def home(request):
     return render(request, "registration/home.html", {})
