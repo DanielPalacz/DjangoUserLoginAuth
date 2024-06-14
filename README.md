@@ -1,5 +1,7 @@
 # DjangoUserLoginAuth
-
+ - usage of basic Django login / logout functionalities
+ - django.contrib.auth.views.LoginView
+ - django.contrib.auth.views.LogoutView
 ```
 python -m venv venv
 source venv/bin/activate
@@ -10,17 +12,21 @@ cd mysite
 python manage.py startapp login
 	register 'login' application
 
-Developed 'login app':
+Developed html templates
+ - login.html
+ - user_logged_out.html
+ - dashboard.html
+ 
+settings.py:
+	LOGIN_REDIRECT_URL = "/account/"
+	LOGOUT_REDIRECT_URL = "/logged_out/"
+	LOGIN_URL = "/login/"
+	LOGOUT_URL = "/logout/"
+
+Developed 'login' app endpoints:
 	GET /login
 	POST /logout
 	GET /logged_out
 	GET /account
 		- dashboard page
-
-also in settings.py:
-	LOGIN_REDIRECT_URL = "/account/"
-	LOGOUT_REDIRECT_URL = "/"
-	LOGIN_URL = "/login/"
-	LOGOUT_URL = "/logout/"
-
 ```
