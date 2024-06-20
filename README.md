@@ -1,7 +1,9 @@
 # DjangoUserLoginAuth
- - usage of basic Django login / logout functionalities
+Usage of basic Django login / logout functionalities:
  - django.contrib.auth.views.LoginView
  - django.contrib.auth.views.LogoutView
+ - django.contrib.auth.forms.UserCreationForm (register view/url)
+
 ```
 python -m venv venv
 source venv/bin/activate
