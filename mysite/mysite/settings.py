@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
+    'crispy_bootstrap4',
     'login',
 ]
 
@@ -127,3 +129,5 @@ LOGIN_REDIRECT_URL = "/account/"
 LOGOUT_REDIRECT_URL = "/logged_out/"
 LOGIN_URL = "/login/"
 LOGOUT_URL = "/logout/"
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"

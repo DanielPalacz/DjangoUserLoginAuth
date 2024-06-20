@@ -1,0 +1,33 @@
+{% extends "registration/base.html" %}
+
+{% block title %}
+Add new user.
+{% endblock %}
+
+
+{% block content %}
+
+    {% if request.user.is_authenticated %}
+            <p>Logged as '{{request.user}}' user.</p>
+
+            <form method="post" action="{% url 'login:logout' %}">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+    {% else %}
+
+
+    {% load crispy_forms_tags %}
+
+<b><u><h1>User registration form:</h1></u></b>
+    <div class="login-form">
+        <form action="{% url 'login:register' %}" method="post" class="form-group">
+            {% csrf_token %}
+            {{form|crispy}}
+            <button type="submit" value="create">Register</button>
+        </form>
+    </div>
+
+    {% endif %}
+
+{% endblock %}
